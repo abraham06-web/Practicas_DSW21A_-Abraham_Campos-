@@ -1,0 +1,26 @@
+fun main() {
+    
+    val valor1 = 6.0
+    val valor2 = 3.0
+    val operacion = '-'
+
+   
+    val resultado = calculadora(valor1, valor2, operacion)
+    println("Resultado: $resultado")
+}
+
+fun calculadora(valor1: Double, valor2: Double, operacion: Char): String {
+    return when (operacion) {
+        '+' -> (valor1 + valor2).toString()
+        '-' -> (valor1 - valor2).toString()
+        '*' -> (valor1 * valor2).toString()
+        '/' -> {
+            if (valor2 != 0.0) {
+                (valor1 / valor2).toString()
+            } else {
+                "Error: División por cero"
+            }
+        }
+        else -> "Error: Operación no válida"
+    }
+}
