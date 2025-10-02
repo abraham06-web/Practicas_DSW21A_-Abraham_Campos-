@@ -1,0 +1,16 @@
+fun main() {
+    val resultado = obtenerNumerosPares()
+    println(resultado) 
+}
+
+fun obtenerNumerosPares(): String {
+    val numerosPares = mutableListOf<Int>()
+
+    for (i in 1..100) {
+        if (i % 2 == 0) {
+            numerosPares.add(i)
+        }
+    }
+
+    return "Tamaño de la lista: ${numerosPares.size}\nElementos: ${numerosPares.joinToString(", ")}"
+}
